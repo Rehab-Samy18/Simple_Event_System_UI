@@ -1,8 +1,18 @@
 <p>event-edit works!</p>
-<input type="text" [(ngModel)]="event._id"/>
 <input type="text" [(ngModel)]="event.title"/>
 <input type="text" [(ngModel)]="event.eventDate"/>
-<input type="text" [(ngModel)]="event.mainSpeaker"/>
-<input type="text" [(ngModel)]="event.otherSpeakers"/>
-<input type="text" [(ngModel)]="event.students"/>
+<select [(ngModel)]="event.mainSpeaker">
+    <option disabled>--Select--</option>
+    <option *ngFor="let speaker of speakers" [value]="speaker._id">{{speaker.username}}</option>
+</select>
+
+<select [(ngModel)]="event.otherSpeakers" multiple>
+    <option disabled>--Select--</option>
+    <option *ngFor="let speaker of speakers" [value]="speaker._id">{{speaker.username}}</option>
+</select>
+
+<select [(ngModel)]="event.students" multiple>
+    <option disabled>--Select--</option>
+    <option *ngFor="let std of students" [value]="std._id">{{std.email}}</option>
+</select>
 <button (click)="save()">Edit Event</button>

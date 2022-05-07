@@ -17,7 +17,7 @@ const routes: Routes = [
   {path:'events/add',component:EventAddComponent},
   {path:'events/delete/:_id',component:EventDeleteComponent},
   {path:'events/details/:_id',component:EventDetailsComponent},
-  {path:'events/edit',component:EventEditComponent}
+  {path:'events/edit/:_id',component:EventEditComponent}
 ];
 
 @NgModule({
