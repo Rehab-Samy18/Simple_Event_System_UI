@@ -1,0 +1,59 @@
+<h1>Event List</h1>
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Main Speaker</th>
+            <th>Other Speakers</th>
+            <th>Students</th>
+            <th>Operations</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of events">
+            <td>{{item._id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.eventDate}}</td>
+            <td>
+                <tr>ID : {{item.mainSpeaker._id}}</tr>
+                <tr>Email : {{item.mainSpeaker.email}}</tr>
+                <tr>Username : {{item.mainSpeaker.username}}</tr>
+                <tr>City : {{item.mainSpeaker.city}}</tr>
+                <tr>Street : {{item.mainSpeaker.street}}</tr>
+                <tr>Building : {{item.mainSpeaker.building}}</tr>
+            </td>
+            <td>
+                <tr *ngFor="let speakers of item.otherSpeakers">
+                    <td>
+                        <tr>ID : {{speakers._id}}</tr>
+                        <tr>Email : {{speakers.email}}</tr>
+                        <tr>Username : {{speakers.username}}</tr>
+                        <tr>City : {{speakers.city}}</tr>
+                        <tr>Street : {{speakers.street}}</tr>
+                        <tr>Building : {{speakers.building}}</tr>
+                    </td>
+                </tr>
+            </td>
+            <td>
+                <tr *ngFor="let std of item.students">
+                    <td>
+                        <tr>ID : {{std._id}}</tr>
+                        <tr>Email : {{std.email}}</tr>
+                    </td>
+                </tr>
+            </td>
+            <td>
+                <a class="btn btn-danger" [routerLink]="['/events/delete',item._id]">Delete</a>
+            </td>
+            <td>
+                <a class="btn btn-danger" [routerLink]="['/events/details',item._id]">Details</a>
+            </td>
+            <td>
+                <a class="btn btn-danger" [routerLink]="['/events/edit']">Edit</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

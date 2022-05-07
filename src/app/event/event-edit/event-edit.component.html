@@ -1,0 +1,8 @@
+<p>event-edit works!</p>
+<input type="text" [(ngModel)]="event._id"/>
+<input type="text" [(ngModel)]="event.title"/>
+<input type="text" [(ngModel)]="event.eventDate"/>
+<input type="text" [(ngModel)]="event.mainSpeaker"/>
+<input type="text" [(ngModel)]="event.otherSpeakers"/>
+<input type="text" [(ngModel)]="event.students"/>
+<button (click)="save()">Edit Event</button>
