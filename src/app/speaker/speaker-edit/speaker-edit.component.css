@@ -1,17 +1,16 @@
-.add-event-div{
+.edit-speaker-div{
     width: 25%;
     position: relative;
     text-align: center;
     left: 500px;
-    top: 70px;
+    top: 100px;
     box-sizing: border-box;
     border-radius: 10px;
     background-color: aliceblue;
-    height: 550px;
+    height: 440px;
 }
 
-
-h2{
+h1{
     color: rgb(245, 67, 12);
     position: relative;
     padding: 10px;

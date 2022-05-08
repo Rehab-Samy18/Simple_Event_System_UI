@@ -5,8 +5,7 @@ html, body {
     height: 100%; 
 }
 body { 
-    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
-    /* background-image: url('./assets/image-2.png');
-    background-repeat: no-repeat; */
+    margin: 0; 
+    font-family: montserrat, arial, verdana; 
+    background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6))
 }
-

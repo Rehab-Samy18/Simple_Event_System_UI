@@ -15,4 +15,25 @@ export class SpeakerService {
     });
     return this.http.get<Speaker[]>(this.baseurl,{headers:httpHeaders});
   }
+  deleteSpeaker(id:number){
+    const httpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    });
+    return this.http.delete<Speaker>(this.baseurl+"/"+id,{headers:httpHeaders})
+  }
+  getSpeaker(id:number){
+    const httpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    });
+    return this.http.get<Speaker>(this.baseurl+"/"+id,{headers:httpHeaders})
+  }
+  editSpeaker(speaker:Speaker){
+    const httpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    });
+    return this.http.put<Speaker>(this.baseurl+"/"+speaker._id,speaker,{headers:httpHeaders})
+  }
 }

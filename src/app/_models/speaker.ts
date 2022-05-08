@@ -2,7 +2,7 @@ import * as mongoose from "mongoose";
 
 export class Speaker {
     constructor(
-        public _id : mongoose.Types.ObjectId,
+        public _id : any,
         public email : string,
         public username : string,
         public password : string,

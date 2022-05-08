@@ -1,47 +1,34 @@
-<input type="text" [(ngModel)]="event._id"/>
-<input type="text" [(ngModel)]="event.title"/>
-<input type="text" [(ngModel)]="event.eventDate"/>
-
-<select [(ngModel)]="event.mainSpeaker">
-    <option disabled>--Select--</option>
-    <option *ngFor="let speaker of speakers" [value]="speaker._id">{{speaker.username}}</option>
-</select>
-
-<select [(ngModel)]="event.otherSpeakers" multiple>
-    <option disabled>--Select--</option>
-    <option *ngFor="let speaker of speakers" [value]="speaker._id">{{speaker.username}}</option>
-</select>
-
-<select [(ngModel)]="event.students" multiple>
-    <option disabled>--Select--</option>
-    <option *ngFor="let std of students" [value]="std._id">{{std.email}}</option>
-</select>
-<button (click)="save()">Create Event</button>
-
-<!-- <div fxLayoutAlign="center center" fxFlexFill class="add-event-div">
-    <mat-card fxFlex="40">
-        <mat-toolbar color="warn">Add New Event</mat-toolbar>
-         <form fxLayoutAlign="stretch" fxLayout="column" class="add-event-form" [formGroup]="formGroup" (ngSubmit)="save()">
-             <mat-form-field>
-               <input matInput placeholder="ID" formControlName="_id" [(ngModel)]="event._id">
-             </mat-form-field>
-           
-             <mat-form-field>
-                 <input matInput placeholder="Title" formControlName="title" [(ngModel)]="event.title">
-            </mat-form-field>
-            <mat-form-field>
-                <input matInput placeholder="Event Date" formControlName="eventDate" [(ngModel)]="event.eventDate">
-           </mat-form-field>
-           <mat-form-field>
-            <input matInput placeholder="Main Speaker" formControlName="mainSpeaker" [(ngModel)]="event.mainSpeaker">
-            </mat-form-field>
-            <mat-form-field>
-                <input matInput placeholder="Other Speakers" formControlName="otherSpeakers" [(ngModel)]="event.otherSpeakers">
-           </mat-form-field>
-           <mat-form-field>
-            <input matInput placeholder="Students" formControlName="students" [(ngModel)]="event.students">
-        </mat-form-field>
-            <button mat-raised-button type="submit" color="warn">Add</button>
-           </form>
-     </mat-card>
- </div>  -->
+<div class="add-event-div">
+    <h2>Add New Event</h2>
+    <mat-form-field appearance="fill">
+        <mat-label>ID</mat-label>
+        <input matInput [(ngModel)]="event._id" required>
+    </mat-form-field><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput type="text" [(ngModel)]="event.title" required>
+</mat-form-field><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Date</mat-label>
+    <input matInput [(ngModel)]="event.eventDate" required>
+</mat-form-field><br>
+  <mat-form-field appearance="fill">
+      <mat-label>Select Main Speaker</mat-label>
+      <mat-select [(ngModel)]="event.mainSpeaker" required>
+          <mat-option *ngFor="let speaker of speakers" [value]="speaker._id">{{speaker.username}}</mat-option>
+    </mat-select>
+</mat-form-field><br>
+    <mat-form-field appearance="fill">
+        <mat-label>Other Speakers</mat-label>
+        <mat-select [(ngModel)]="event.otherSpeakers" multiple required>
+            <mat-option *ngFor="let s of speakers" [value]="s._id">{{s.username}}</mat-option>
+        </mat-select>
+    </mat-form-field><br>
+    <mat-form-field appearance="fill">
+        <mat-label>Students</mat-label>
+        <mat-select [(ngModel)]="event.students" multiple required>
+            <mat-option *ngFor="let std of students" [value]="std._id">{{std.email}}</mat-option>
+        </mat-select>
+    </mat-form-field><br>
+    <button mat-raised-button color="warn" (click)="save()">Add Event</button>
+</div>

@@ -1,4 +1,4 @@
-<h1>Event List</h1>
+<h1 class="alert alert-success">Event List</h1><br>
 <table class="table table-hover table-bordered">
     <thead>
         <tr>
@@ -33,6 +33,7 @@
                         <tr>City : {{speakers.city}}</tr>
                         <tr>Street : {{speakers.street}}</tr>
                         <tr>Building : {{speakers.building}}</tr>
+                        <hr>
                     </td>
                 </tr>
             </td>
@@ -41,17 +42,14 @@
                     <td>
                         <tr>ID : {{std._id}}</tr>
                         <tr>Email : {{std.email}}</tr>
+                        <hr>
                     </td>
                 </tr>
             </td>
             <td>
-                <a class="btn btn-danger" [routerLink]="['/events/delete',item._id]">Delete</a>
-            </td>
-            <td>
+                <a class="btn btn-success" [routerLink]="['/events/delete',item._id]">Delete</a>
                 <a class="btn btn-danger" [routerLink]="['/events/details',item._id]">Details</a>
-            </td>
-            <td>
-                <a class="btn btn-danger" [routerLink]="['/events/edit',item._id]">Edit</a>
+                <a class="btn btn-success" [routerLink]="['/events/edit',item._id]">Edit</a>
             </td>
         </tr>
     </tbody>

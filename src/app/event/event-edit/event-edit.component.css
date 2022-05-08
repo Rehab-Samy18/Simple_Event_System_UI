@@ -1,0 +1,17 @@
+.edit-event-div{
+    width: 25%;
+    position: relative;
+    text-align: center;
+    left: 500px;
+    top: 70px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: aliceblue;
+    height: 500px;
+}
+
+h1{
+    color: rgb(245, 67, 12);
+    position: relative;
+    padding: 10px;
+}

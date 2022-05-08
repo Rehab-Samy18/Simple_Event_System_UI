@@ -1,18 +1,30 @@
-<p>event-edit works!</p>
-<input type="text" [(ngModel)]="event.title"/>
-<input type="text" [(ngModel)]="event.eventDate"/>
-<select [(ngModel)]="event.mainSpeaker">
-    <option disabled>--Select--</option>
-    <option *ngFor="let speaker of speakers" [value]="speaker._id">{{speaker.username}}</option>
-</select>
-
-<select [(ngModel)]="event.otherSpeakers" multiple>
-    <option disabled>--Select--</option>
-    <option *ngFor="let speaker of speakers" [value]="speaker._id">{{speaker.username}}</option>
-</select>
-
-<select [(ngModel)]="event.students" multiple>
-    <option disabled>--Select--</option>
-    <option *ngFor="let std of students" [value]="std._id">{{std.email}}</option>
-</select>
-<button (click)="save()">Edit Event</button>
+<div class="edit-event-div">
+    <h1>Edit Event</h1>
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input matInput type="text" [(ngModel)]="event.title" required>
+</mat-form-field><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Date</mat-label>
+    <input matInput [(ngModel)]="event.eventDate" required>
+</mat-form-field><br>
+  <mat-form-field appearance="fill">
+      <mat-label>Select Main Speaker</mat-label>
+      <mat-select [(ngModel)]="event.mainSpeaker" required>
+          <mat-option *ngFor="let speaker of speakers" [value]="speaker._id">{{speaker.username}}</mat-option>
+    </mat-select>
+</mat-form-field><br>
+    <mat-form-field appearance="fill">
+        <mat-label>Other Speakers</mat-label>
+        <mat-select [(ngModel)]="event.otherSpeakers" multiple required>
+            <mat-option *ngFor="let s of speakers" [value]="s._id">{{s.username}}</mat-option>
+        </mat-select>
+    </mat-form-field><br>
+    <mat-form-field appearance="fill">
+        <mat-label>Students</mat-label>
+        <mat-select [(ngModel)]="event.students" multiple required>
+            <mat-option *ngFor="let std of students" [value]="std._id">{{std.email}}</mat-option>
+        </mat-select>
+    </mat-form-field><br>
+    <button mat-raised-button color="warn" (click)="save()">Edit Event</button>
+</div>

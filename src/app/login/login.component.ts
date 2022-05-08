@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
           else if(result.token && result.msg=='Admin')
           {
             localStorage.setItem('token',result.token);
-            this.router.navigateByUrl('events/add');
+            this.router.navigateByUrl('speakers');
           }
         },
       )

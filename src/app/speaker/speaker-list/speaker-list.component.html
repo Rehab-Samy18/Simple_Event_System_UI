@@ -1,5 +1,5 @@
-<h1>Speaker List</h1>
-<table class="table table-hover">
+<h1 class="alert alert-success">Speakers List</h1>
+<table class="table table-hover table-bordered">
     <thead>
         <tr>
             <th>ID</th>
@@ -8,6 +8,7 @@
             <th>City</th>
             <th>Street</th>
             <th>Building</th>
+            <th>Operations</th>
         </tr>
     </thead>
     <tbody>
@@ -18,6 +19,11 @@
             <td>{{item.city}}</td>
             <td>{{item.street}}</td>
             <td>{{item.building}}</td>
+            <td>
+                <a class="btn btn-danger" [routerLink]="['/speakers/delete',item._id]">Delete</a>
+                <a class="btn btn-success" [routerLink]="['/speakers/edit',item._id]">Edit</a>
+                <a class="btn btn-danger" [routerLink]="['/speakers/details',item._id]">Details</a>
+            </td>
         </tr>
     </tbody>
 </table>

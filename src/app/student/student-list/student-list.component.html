@@ -1,15 +1,21 @@
-<h1>Student List</h1>
-<table class="table table-hover">
+<h1 class="alert alert-success">Students List</h1><br>
+<table class="table table-hover table-bordered">
     <thead>
         <tr>
             <th>ID</th>
             <th>Email</th>
+            <th>Operations</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let item of students">
             <td>{{item._id}}</td>
             <td>{{item.email}}</td>
+            <td>
+                <a class="btn btn-danger" [routerLink]="['/students/delete',item._id]">Delete</a>
+                <a class="btn btn-success" [routerLink]="['/students/edit',item._id]">Edit</a>
+                <a class="btn btn-danger" [routerLink]="['/students/details',item._id]">Details</a>
+            </td>
         </tr>
     </tbody>
 </table>
