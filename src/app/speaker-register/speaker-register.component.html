@@ -1,0 +1,27 @@
+<div fxLayoutAlign="center center" fxFlexFill class="speaker-register-div">
+    <mat-card fxFlex="50">
+        <mat-toolbar color="basic">Speaker Registration</mat-toolbar>
+        <h4 *ngIf="error">{{error}}</h4>
+         <form fxLayoutAlign="stretch" fxLayout="column" class="speaker-register-form" [formGroup]="formGroup" (ngSubmit)="speakerRegisterProcess()">
+             <mat-form-field>
+                 <input matInput placeholder="Email" formControlName="email">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Username" formControlName="username">
+                  </mat-form-field>
+             <mat-form-field>
+                 <input matInput type="password" placeholder="Password" formControlName="password">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="City" formControlName="city">
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Street" formControlName="street">
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Building" formControlName="building">
+              </mat-form-field>
+                <button mat-raised-button type="submit" color="basic">Register</button>
+           </form>
+     </mat-card>
+ </div> 

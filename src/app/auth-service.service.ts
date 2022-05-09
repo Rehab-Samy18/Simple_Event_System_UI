@@ -13,4 +13,10 @@ export class AuthServiceService {
     console.log("I'm Server");
     return this.http.post(this.baseurl+"login",data)
   }
+  studentRegister(data:any):Observable<any>{
+    return this.http.post(this.baseurl+"studentregister",data);
+  }
+  speakerRegister(data:any):Observable<any>{
+    return this.http.post(this.baseurl+"speakerregister",data);
+  }
 }

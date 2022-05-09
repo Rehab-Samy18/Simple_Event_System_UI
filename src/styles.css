@@ -7,5 +7,6 @@ html, body {
 body { 
     margin: 0; 
     font-family: montserrat, arial, verdana; 
-    background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6))
+    /* background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6)) */
+    background-image: url('assets/istockphoto-1156315651-612x612.jpg');
 }
