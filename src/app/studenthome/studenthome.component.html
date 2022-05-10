@@ -1,1 +1,9 @@
-<h1 class="alert alert-success">Welcome Dear Student</h1>
+<h1>Welcome Dear Student</h1>
+<div>
+    <h2 *ngFor="let item of students" class="alert alert-success">
+        ID : {{item._id}}<br>
+        Email : {{item.email}}<br>
+        Password : {{item.password}}<br><br>
+        <a class="btn btn-primary" [routerLink]="['/student/edit',item._id]">Edit Your Data</a>
+    </h2>
+</div>

@@ -1,0 +1,12 @@
+<div class="edit-student-div">
+    <h1>Edit Your Data</h1>
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="text" [(ngModel)]="student.email" required>
+</mat-form-field><br>
+<mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="password" [(ngModel)]="student.password" required>
+</mat-form-field><br>
+    <button mat-raised-button color="basic" (click)="save()">Edit</button>
+</div>

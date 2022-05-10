@@ -1,0 +1,16 @@
+h1{
+    margin-top: 80px;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+div{
+    width: 25%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 500px;
+    top: 240px;
+}

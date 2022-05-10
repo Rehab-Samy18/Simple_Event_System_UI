@@ -24,6 +24,8 @@ import { StudenthomeComponent } from './studenthome/studenthome.component';
 import { SpeakerhomeComponent } from './speakerhome/speakerhome.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { StudentEditFormComponent } from './student-edit-form/student-edit-form.component';
+import { SpeakerEditFormComponent } from './speaker-edit-form/speaker-edit-form.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { FooterComponent } from './footer/footer.component';
     SpeakerhomeComponent,
     HeaderComponent,
     FooterComponent,
+    StudentEditFormComponent,
+    SpeakerEditFormComponent,
   ],
   imports: [
     BrowserModule,

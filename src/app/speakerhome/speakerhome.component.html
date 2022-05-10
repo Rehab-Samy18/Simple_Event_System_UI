@@ -1,1 +1,13 @@
-<h1 class="alert alert-success">Welcome Dear Speaker</h1>
+<h1>Welcome Dear Speaker</h1><br>
+<div>
+    <h2 *ngFor="let item of speakers" class="alert alert-success">
+        ID : {{item._id}}<br>
+        Email : {{item.email}}<br>
+        Username : {{item.username}}<br>
+        Password : {{item.password}}<br>
+        City : {{item.city}}<br>
+        Street : {{item.street}}<br>
+        Building : {{item.building}}<br><br>
+        <a class="btn btn-primary" [routerLink]="['/speaker/edit',item._id]">Edit Your Data</a>
+    </h2>
+</div>

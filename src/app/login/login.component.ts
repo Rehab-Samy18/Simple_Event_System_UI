@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { AuthServiceService } from '../auth-service.service';
+import { StudentService } from '../student.service';
+import { Student } from '../_models/student';
 
 @Component({
   selector: 'app-login',
@@ -14,8 +17,7 @@ export class LoginComponent implements OnInit {
     email: new FormControl(''),
     password: new FormControl('')
 })
-  constructor(public authSer:AuthServiceService,public router:Router) { }
-
+  constructor(public authSer:AuthServiceService,public router:Router,public stdSer:StudentService) { }
   ngOnInit(): void {
     this.initForm();
   }

@@ -1,0 +1,22 @@
+.edit-speaker-div{
+    width: 25%;
+    position: relative;
+    text-align: center;
+    left: 500px;
+    top: 60px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: aliceblue;
+    height: 550px;
+}
+
+h1{
+    background-color: rgb(4, 4, 54);
+    color: white;
+    position: relative;
+    padding: 10px;
+}
+button{
+    background-color: darkblue;
+    color: white;
+}
