@@ -13,13 +13,15 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatSelectModule} from '@angular/material/select';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { StudenteventsComponent } from './studentevents/studentevents.component';
 
 @NgModule({
   declarations: [
     StudentListComponent,
     StudentDeleteComponent,
     StudentEditComponent,
-    StudentDetailsComponent
+    StudentDetailsComponent,
+    StudenteventsComponent
   ],
   imports: [
     CommonModule,

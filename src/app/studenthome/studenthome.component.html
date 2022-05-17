@@ -5,5 +5,6 @@
         Email : {{item.email}}<br>
         Password : {{item.password}}<br><br>
         <a class="btn btn-primary" [routerLink]="['/student/edit',item._id]">Edit Your Data</a>
+        <a class="btn btn-primary" [routerLink]="['/student/showevents',item._id]">Show Your Registered Events</a>
     </h2>
 </div>

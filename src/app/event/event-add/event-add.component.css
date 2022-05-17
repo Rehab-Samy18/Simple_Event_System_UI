@@ -12,7 +12,12 @@
 
 
 h2{
-    color: rgb(245, 67, 12);
+    background-color: rgb(4, 4, 54);
+    color: white;
     position: relative;
     padding: 10px;
+}
+button{
+    background-color: rgb(4, 4, 54);
+    color: white;
 }

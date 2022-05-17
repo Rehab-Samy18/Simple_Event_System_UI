@@ -21,6 +21,7 @@ import { StudentDeleteComponent } from './student/student-delete/student-delete.
 import { StudentDetailsComponent } from './student/student-details/student-details.component';
 import { StudentEditComponent } from './student/student-edit/student-edit.component';
 import { StudentListComponent } from './student/student-list/student-list.component';
+import { StudenteventsComponent } from './student/studentevents/studentevents.component';
 import { StudenthomeComponent } from './studenthome/studenthome.component';
 
 const routes: Routes = [
@@ -40,12 +41,13 @@ const routes: Routes = [
   {path:'students/delete/:_id',component:StudentDeleteComponent},
   {path:'students/edit/:_id',component:StudentEditComponent},
   {path:'student/edit/:_id',component:StudentEditFormComponent},
+  {path:'student/showevents/:_id',component:StudenteventsComponent},
   {path:'speaker/edit/:_id',component:SpeakerEditFormComponent},
   {path:'students/details/:_id',component:StudentDetailsComponent},
   {path:'speakers',component:SpeakerListComponent},
   {path:'speakers/delete/:_id',component:SpeakerDeleteComponent},
   {path:'speakers/edit/:_id',component:SpeakerEditComponent},
-  {path:'speakers/details/:_id',component:SpeakerDetailsComponent}
+  {path:'speakers/details/:_id',component:SpeakerDetailsComponent},
 ];
 
 @NgModule({

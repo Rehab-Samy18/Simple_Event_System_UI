@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Student } from './_models/student';
+import { Event } from './_models/event';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,7 @@ export class StudentService {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     });
-    return this.http.delete<Event>(this.baseurl+"/"+id,{headers:httpHeaders})
+    return this.http.delete<Student>(this.baseurl+"/"+id,{headers:httpHeaders})
   }
   getStudent(id:number){
     const httpHeaders = new HttpHeaders({
@@ -35,5 +36,12 @@ export class StudentService {
       'Authorization': `Bearer ${localStorage.getItem('token')}`
     });
     return this.http.put<Student>(this.baseurl+"/"+student._id,student,{headers:httpHeaders})
+  }
+  showStudentEvents(id:number){
+    const httpHeaders = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+    });
+    return this.http.get<Event[]>(this.baseurl+"/events/"+id,{headers:httpHeaders})
   }
 }
